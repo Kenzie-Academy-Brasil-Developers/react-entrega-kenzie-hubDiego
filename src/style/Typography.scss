@@ -1,0 +1,30 @@
+.title{
+    font-size: 1.125rem;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--gray-0);
+
+    &.two{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+.headLine{
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-family: var(--font-primary);
+    color: var(--gray-1);
+
+    &.bold{
+        font-weight: 600;
+        color: var(--white);
+    }
+}
+
+.paragraph{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--font-primary);
+    color: var(--white);
+}

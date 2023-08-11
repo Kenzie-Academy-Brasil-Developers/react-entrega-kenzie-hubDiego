@@ -1,0 +1,21 @@
+%defaultDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    margin-top: 4.83rem;
+    div{
+        @extend %defaultDisplay;
+    }
+}
+.title{
+    @extend %defaultDisplay;
+}
+
+.registerPage{
+    @extend %defaultDisplay;
+    gap: 1.25rem;
+}

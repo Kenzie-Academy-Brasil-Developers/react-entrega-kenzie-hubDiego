@@ -1,0 +1,16 @@
+label{
+    select{
+        width: 100%;
+        height: 3rem;
+        padding-left: 0.9375rem;
+        margin-top: 1rem;
+
+        border-radius: 0.25rem;
+        color: var(--gray-1);
+        background-color: var(--gray-2);
+
+        font-family: var(--font-primary);
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}

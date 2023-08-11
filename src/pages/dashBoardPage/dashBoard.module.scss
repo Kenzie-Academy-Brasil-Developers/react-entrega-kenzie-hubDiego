@@ -1,0 +1,24 @@
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        padding: 2.81rem ;
+        border-top: 0.0625rem solid var(--gray-3);
+        border-bottom: 0.0625rem solid var(--gray-3);
+    }
+}
+
+@media (max-Width: 32.5rem){
+    section{
+        
+    
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+} 

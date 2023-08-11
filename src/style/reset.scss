@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+img{
+    width: 7.62875rem;
+height: 1.32575rem;
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+input, textarea, select{
+    background-color: transparent;
+    border: none;
+}
+
+body{
+    background-color: var(--gray-4);
+}
