@@ -2,7 +2,7 @@ import { Input } from "../../components/input"
 import { PasswordImput } from "../InputPassword"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { loginFormSchema } from "./loginFormSchema"
 import style from "../../pages/LoginPage/loginPage.module.scss"
 import { api } from "../../services/api"
@@ -11,9 +11,6 @@ import "react-toastify/dist/ReactToastify.css"
 
 export const LoginForm = ({setLogin}) => {
     const navigate = useNavigate()
-    const registerPage = () => {
-        navigate("/register")
-    }
 
     const {register, handleSubmit, formState:{ errors } } = useForm({
         resolver:zodResolver(loginFormSchema)
@@ -34,7 +31,6 @@ export const LoginForm = ({setLogin}) => {
         }
     }
 
-
     const submit = (formData) =>{
         userLogin(formData)
     }
@@ -49,7 +45,9 @@ export const LoginForm = ({setLogin}) => {
             <button className="button--register submit">Entrar</button>
             <div className={style.registerPage}>
                 <p className="headLine">Ainda não possui uma conta?</p>
-                <button className="button--register" onClick={registerPage}>Cadastre-se</button>
+                <Link to="/register" className="button--register">
+                    Cadastre-se
+                </Link>
             </div>
         </form>
     )

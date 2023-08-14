@@ -1,12 +1,14 @@
-import { useNavigate } from "react-router"
+import { useNavigate } from "react-router-dom"
 
 export const Button = ({children, setLogin}) => {
     const navigate = useNavigate()
     
     const logout = () => {
         navigate("/")
-        setLogin(null)
-        localStorage.removeItem("@USER")
+        if(setLogin != null){
+            setLogin(null)
+            localStorage.removeItem("@USER")
+        }
     }
 
     return(
