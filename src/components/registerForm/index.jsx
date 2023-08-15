@@ -33,12 +33,12 @@ export const RegisterForm = () => {
 
     return(
         <form onSubmit={handleSubmit(submit)}>
-            <Input placeholder="Digite o seu nome" label="Nome" required type="text" id="name" {...register("name")} error={errors.name}/>
-            <Input placeholder="Digite aqui seu email" label="Email" required type="email" id="email" {...register("email")} error={errors.email}/>
-            <PasswordImput placeholder="Digite aqui sua senha" label="Senha" required id="password" {...register("password")} error={errors.password}/>
-            <PasswordImput placeholder="Digite aqui sua senha" label="Confirma Senha" required id="confirmPassword" {...register("confirmPassword")} error={errors.confirmPassword}/>
-            <Input placeholder="Fale sobre você" label="Bio" required type="text" id="bio" {...register("bio")} error={errors.bio}/>
-            <Input placeholder="Opção de contato" label="Contato" required type="text" id="contact" {...register("contact")} error={errors.contact} />
+            <Input placeholder="Digite o seu nome" label="Nome" type="text" id="name" {...register("name")} error={errors.name}/>
+            <Input placeholder="Digite aqui seu email" label="Email" type="email" id="email" {...register("email")} error={errors.email}/>
+            <PasswordImput placeholder="Digite aqui sua senha" label="Senha" id="password" {...register("password")} error={errors.password}/>
+            <PasswordImput placeholder="Digite aqui sua senha" label="Confirma Senha" id="confirmPassword" {...register("confirmPassword")} error={errors.confirmPassword}/>
+            <Input placeholder="Fale sobre você" label="Bio" type="text" id="bio" {...register("bio")} error={errors.bio}/>
+            <Input placeholder="Opção de contato" label="Contato" type="text" id="contact" {...register("contact")} error={errors.contact} />
             <Select {...register("course_module")} error={errors.module}/>
             <button type="submit" className="button--register disable">Cadastrar</button>
         </form>

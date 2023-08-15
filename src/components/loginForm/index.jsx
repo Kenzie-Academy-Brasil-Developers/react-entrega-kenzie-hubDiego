@@ -40,8 +40,8 @@ export const LoginForm = ({setLogin}) => {
             <div className={style.title}>
                 <h1 className="title">Login</h1>
             </div>
-            <Input label="Email" placeholder="Digite aqui seu email" required type="email" id="email"{...register("email")} error={errors.email}/>
-            <PasswordImput label="Senha" placeholder="Digite aqui sua senha" required id="password" {...register("password")} error={errors.password}/>
+            <Input label="Email" placeholder="Digite aqui seu email" type="email" id="email"{...register("email")} error={errors.email}/>
+            <PasswordImput label="Senha" placeholder="Digite aqui sua senha" id="password" {...register("password")} error={errors.password}/>
             <button className="button--register submit">Entrar</button>
             <div className={style.registerPage}>
                 <p className="headLine">Ainda não possui uma conta?</p>
