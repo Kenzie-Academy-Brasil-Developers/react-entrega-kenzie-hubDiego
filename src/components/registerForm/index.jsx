@@ -1,31 +1,20 @@
-import {Input} from "../input/index"
-import {PasswordImput} from "../InputPassword"
+import { Input } from "../input/index"
+import { PasswordImput } from "../InputPassword"
 import { Select } from "../../components/Select"
 import { useForm } from "react-hook-form"
-import { useNavigate } from "react-router"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { registerFormSchema } from "./RegisterFormSchema"
-import { toast } from "react-toastify"
-import { api } from "../../services/api"
+import { useContext } from "react"
+import { UserRoutinesContext } from "../../context/UserRoutinesContext"
 import "./registerForm.module.scss"
 import "react-toastify/dist/ReactToastify.css"
 
 export const RegisterForm = () => {
-    const navigate = useNavigate()
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: zodResolver(registerFormSchema)
     })
 
-    const userRegister = async (formData) =>{
-        try{
-            await api.post("/users", formData)
-            toast.success("Conta criada com sucesso!")
-            navigate("/")
-        }catch(error){
-            toast.error("Ops! Algo deu errado")
-            console.log(error)
-        }
-    }
+    const { userRegister } = useContext(UserRoutinesContext)
 
     const submit = (formData) => {
         userRegister(formData)

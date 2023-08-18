@@ -2,7 +2,7 @@ import Logo from "../../assets/Logo.png"
 import { LoginForm } from "../../components/loginForm"
 import style from "./loginPage.module.scss"
 
-export const LoginPage = ({setLogin}) =>{
+export const LoginPage = () =>{
     return(
         <>
             <header className={style.header}>
@@ -12,7 +12,7 @@ export const LoginPage = ({setLogin}) =>{
             </header>
             <main>
                 <div className="container sm">
-                    <LoginForm setLogin={setLogin}/>
+                    <LoginForm/>
                 </div>
             </main>
         </>

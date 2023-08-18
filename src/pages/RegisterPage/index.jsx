@@ -1,17 +1,16 @@
 import { RegisterForm } from "../../components/registerForm"
 import style from "./RegisterPage.module.scss"
 import {Header} from "../../components/header"
-import { Button } from "../../components/button"
-import Logo from "../../assets/Logo.png"
+import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { UserRoutinesContext } from "../../context/UserRoutinesContext"
 
 export const RegisterPage = () =>{
+    const {logout} = useContext( UserRoutinesContext )
     return(
         <>
         <Header>
-        <div className="container sm">
-            <img src={Logo} alt="KenzieHub Logo" />
-            <Button>Voltar</Button>
-        </div>
+            <Link to="/" className="button" onClick={logout}>Voltar</Link>
         </Header>
         <main>
             <div className="container sm">
