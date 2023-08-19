@@ -3,7 +3,7 @@ import { RegisterPage } from "../pages/RegisterPage";
 import { DashBoard } from "../pages/dashBoardPage";
 import { Route, Routes } from "react-router";
 import { ToastContainer } from "react-toastify"
-import { PrivateRoutes } from "./privateRoutes";
+import { PrivateRoutes } from "../routes/PrivateRoutes/index";
 
 export const RoutesMain = () => {
     return(
