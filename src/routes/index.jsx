@@ -4,6 +4,7 @@ import { DashBoard } from "../pages/dashBoardPage";
 import { Route, Routes } from "react-router";
 import { ToastContainer } from "react-toastify"
 import { PrivateRoutes } from "../routes/PrivateRoutes/index";
+import { TechProvider } from "../context/TechContext";
 
 export const RoutesMain = () => {
     return(
@@ -12,7 +13,7 @@ export const RoutesMain = () => {
             <Route path="/" element={<LoginPage/>} />
             <Route path="/register" element={<RegisterPage/>} />
             <Route element={<PrivateRoutes/>}>
-                <Route path="/dashboard" element ={<DashBoard/>} />
+                <Route path="/dashboard" element ={<TechProvider><DashBoard/></TechProvider>} />
             </Route>
         </Routes>
         <ToastContainer/>

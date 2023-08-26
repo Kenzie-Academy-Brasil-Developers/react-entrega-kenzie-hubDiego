@@ -13,7 +13,7 @@ export const PasswordImput = forwardRef(({error, label, ...rest}, ref) => {
                     <button type="button" onClick={() => setisHidden(!isHidden)}>{isHidden ? <MdVisibility/> : <MdVisibilityOff/> }</button>
                 </div>
            
-            {error ? <p className="headLine bold">{error.message}</p>: null}
+            {error ? <p className="headLine bold error">{error.message}</p>: null}
         </div>
     )
 })

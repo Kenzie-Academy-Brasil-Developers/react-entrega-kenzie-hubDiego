@@ -1,4 +1,4 @@
-import { RegisterForm } from "../../components/registerForm"
+import { RegisterForm } from "../../components/form/registerForm"
 import style from "./RegisterPage.module.scss"
 import {Header} from "../../components/header"
 import { Link } from "react-router-dom"

@@ -1,15 +1,12 @@
 import { forwardRef } from "react"
 import "./select.module.scss"
 
-export const Select = forwardRef(({error, ...rest}, ref) =>{
+export const Select = forwardRef(({label,children, error, ...rest }, ref, ) =>{
     return(
         <>
-            <label className="headLine">Selecionar módulo
+            <label className="headLine">{label}
             <select {...rest} ref={ref}>
-                <option value="Primeiro módulo (Introdução ao Frontend)">Primeiro módulo</option>
-                <option value="Segundo módulo (Frontend Avançado)">Segundo módulo</option>
-                <option value="Terceiro módulo (Introdução ao Backend)">Terceiro módulo</option>
-                <option value="Quarto módulo (Backend Avançado)">Quarto módulo</option>
+                {children}
             </select>
             </label>
             {error ? <p className="headLine bold">{error.message}</p> : null}

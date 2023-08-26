@@ -12,5 +12,17 @@ label{
         font-family: var(--font-primary);
         font-weight: 400;
         font-size: 1rem;
+    animation: grow 1s ease;
+        
+
+        
     }
 }
+@keyframes grow {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }

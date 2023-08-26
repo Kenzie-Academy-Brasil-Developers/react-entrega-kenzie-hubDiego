@@ -12,4 +12,20 @@ main{
     padding: 2.62rem 1.38rem 0 1.38rem;
 
     background-color: var(--gray-3);
+
+    h1 {
+        animation: grow 1s ease ;
+    }
+    p{
+        animation: grow 1s ease ;
+    }
+}
+
+@keyframes grow {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
 }
