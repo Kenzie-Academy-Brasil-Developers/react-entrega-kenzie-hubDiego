@@ -6,6 +6,19 @@
   background-color: var(--gray-4);
   border-radius: 0.2rem;
   padding: 1rem;
+  transition: 0.5s;
+
+  &:has(button:focus){
+    background-color: var(--gray-2);
+  }
+
+  &:has(.edit:hover){
+    border: 1px solid #3FE864;
+  }
+
+  &:has(.delete:hover){
+    border: 1px solid #E83F5B;
+  }
 
   .containerIcons {
     display: flex;
@@ -23,7 +36,7 @@
 @keyframes fade-in-down {
 	0% {
 		opacity: 0;
-		transform: translateY(-20px);
+		transform: translateY(-1.25rem);
 	}
 	100% {
 		opacity: 1;
@@ -33,7 +46,7 @@
 
 .icons {
   color: var(--white);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .icons:hover {

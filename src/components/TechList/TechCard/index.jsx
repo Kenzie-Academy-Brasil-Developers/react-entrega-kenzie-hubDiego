@@ -12,7 +12,7 @@ export const TechCard = ({ tech }) => {
         <p className="headLine">{tech.status}</p>
         <div>
           <button
-            className={style.icons}
+            className={` ${style.edit} ${style.icons}`}
             title="Edit"
             aria-label="Edit"
             onClick={() => setEditingTech(tech)}
@@ -22,7 +22,7 @@ export const TechCard = ({ tech }) => {
           <button
             title="Delete"
             aria-label="Delete"
-            className={style.icons}
+            className={`${style.delete} ${style.icons}`}
             onClick={() => techDelete(tech.id)}
           >
             <BiTrash />

@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { TechContext } from "../../../context/TechContext";
 import style from "./EditTechModal.module.scss";
+import { useOutClick } from "../../../hooks/useOutClick";
+import { useKeyDown } from "../../../hooks/useKeyDown";
 
 export const EditTechModal = () => {
   const { techUpdate, editingTech, setEditingTech } = useContext(TechContext);
@@ -16,17 +18,26 @@ export const EditTechModal = () => {
     },
   });
 
+  const modalRef = useOutClick(() => {
+    setEditingTech(null)
+})
+
+const buttonRef = useKeyDown("Escape", () => {
+    setEditingTech(null)
+})
+
   const submit = (formData) => {
     techUpdate(formData);
   };
 
   return (
     <div role="dialog" className={style.modalOverlay}>
-      <div className={style.modalBox}>
+      <div ref={modalRef} className={style.modalBox}>
         <div className={style.modalHeader}>
           <p className="paragraph">Tecnologia Detalhes</p>
           <button
             className={style.closeButton}
+            ref={buttonRef}
             onClick={() => setEditingTech(null)}
           >
             <AiOutlineClose/>
